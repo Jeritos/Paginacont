@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { 
+      margin: 0; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      background: transparent; 
+    }
+    #counter {
+      font-size: 60px; 
+      font-weight: bold; 
+      color: #2e5cb8;
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+  <div id="counter">0</div>
+
+  <script>
+    // Configuración
+    const target = 100; // Cambia al total de tus conflictos
+    const duration = 2000; // 2 segundos
+    const counter = document.getElementById("counter");
+
+    // Animación
+    let start = 0;
+    const increment = target / (duration / 16);
+
+    function animate() {
+      start += increment;
+      counter.textContent = Math.floor(start);
+      if (start < target) requestAnimationFrame(animate);
+      else counter.textContent = target;
+    }
+
+    animate();
+  </script>
+</body>
+</html>
