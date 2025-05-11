@@ -1,2 +1,1 @@
-# Paginacont
-conteo de conflictos
+Conteo
